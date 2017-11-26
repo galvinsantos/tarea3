@@ -26,18 +26,23 @@ namespace GalvinSantosCRUDtarea3
         private void button1_Click_1(object sender, EventArgs e)
         {
             operacion oper = new operacion();
-            oper.ConsultaSinResultado(" UPDATE empleado SET nombre='" + txtnombre.Text.ToString() + "', apellido='" + txtapellido.Text.ToString() + "', telefono'" + txttelefono.Text.ToString() +"', cedula'" + txtcedula.Text.ToString() +"' WHERE id='" + txtid.Text + "' ");
+            oper.ConsultaSinResultado(" UPDATE empleado SET nombre='" + txtnombre.Text.ToString() + "', apellido='" + txtapellido.Text.ToString() + "', telefono'" + txttelefono.Text.ToString() + "', cedula'" + txtcedula.Text.ToString() + "' WHERE id='" + txtid.Text + "' ");
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             buscar(txtid.Text);
+            buscar(txtid.Text);
+            buscar(txtid.Text);
+            buscar(txtid.Text);
+            buscar(txtid.Text);
+            buscar(txtid.Text);
         }
 
         private void buscar(string id)
-        { 
+        {
             operacion oper = new operacion();
-            DataSet ds = oper.ConsultaConResultado("SELECT * FROM empleado,cargo WHERE id='" + txtid.Text +"' ");
+            DataSet ds = oper.ConsultaConResultado("SELECT * FROM empleado WHERE id='" + txtid.Text + "' ");
             foreach (DataRow fila in ds.Tables[0].Rows)
             {
                 if (fila["id"] != null) txtid.Text = fila["id"].ToString();
@@ -45,14 +50,29 @@ namespace GalvinSantosCRUDtarea3
                 if (fila["apellido"] != null) txtapellido.Text = fila["apellido"].ToString();
                 if (fila["telefono"] != null) txttelefono.Text = fila["telefono"].ToString();
                 if (fila["cedula"] != null) txtcedula.Text = fila["cedula"].ToString();
-                if (fila["departamento"] != null) txtdepartamento.Text = fila["departamento"].ToString();
-            }
+}
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             operacion oper = new operacion();
             oper.ConsultaSinResultado(" DELETE FROM empleado WHERE id='" + txtid.Text + "' ");
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            //dfgdfgdfg
+        }
+
+        private void llena_departamento()
+        {
+
+            operacion oper = new operacion();
+            DataSet ds = oper.ConsultaConResultado(" select * from departamento ");
+            cmbdepartamento.DataSource = ds.Tables[0];
+            cmbdepartamento.ValueMember = "id";
+            cmbdepartamento.DisplayMember = "nombre";
+
         }
     }
 }

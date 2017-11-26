@@ -44,5 +44,10 @@ namespace GalvinSantosCRUDtarea3
             Cargo form = new Cargo();
             form.Show();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

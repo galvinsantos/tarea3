@@ -42,10 +42,10 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_crear = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtdepartamento = new System.Windows.Forms.TextBox();
             this.btnactualizar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.cmbdepartamento = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -165,19 +165,6 @@
             this.label7.TabIndex = 14;
             this.label7.Text = "Departamento";
             // 
-            // txtdepartamento
-            // 
-            this.txtdepartamento.AutoCompleteCustomSource.AddRange(new string[] {
-            "TI",
-            "Recursos humanos",
-            "Financias",
-            "Ventas"});
-            this.txtdepartamento.Location = new System.Drawing.Point(12, 311);
-            this.txtdepartamento.Multiline = true;
-            this.txtdepartamento.Name = "txtdepartamento";
-            this.txtdepartamento.Size = new System.Drawing.Size(100, 20);
-            this.txtdepartamento.TabIndex = 15;
-            // 
             // btnactualizar
             // 
             this.btnactualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -210,15 +197,23 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // cmbdepartamento
+            // 
+            this.cmbdepartamento.FormattingEnabled = true;
+            this.cmbdepartamento.Location = new System.Drawing.Point(12, 311);
+            this.cmbdepartamento.Name = "cmbdepartamento";
+            this.cmbdepartamento.Size = new System.Drawing.Size(121, 21);
+            this.cmbdepartamento.TabIndex = 19;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(581, 451);
+            this.Controls.Add(this.cmbdepartamento);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnactualizar);
-            this.Controls.Add(this.txtdepartamento);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btn_crear);
             this.Controls.Add(this.pictureBox1);
@@ -234,6 +229,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form2";
             this.Text = "Empleado";
+            this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -255,9 +251,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btn_crear;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtdepartamento;
         private System.Windows.Forms.Button btnactualizar;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ComboBox cmbdepartamento;
     }
 }
