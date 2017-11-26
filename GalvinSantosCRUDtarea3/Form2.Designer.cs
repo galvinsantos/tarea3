@@ -37,16 +37,15 @@
             this.txtnombre = new System.Windows.Forms.TextBox();
             this.txtapellido = new System.Windows.Forms.TextBox();
             this.txttelefono = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtsexo = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtcedula = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_crear = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.txtdepartamento = new System.Windows.Forms.TextBox();
+            this.btnactualizar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -118,23 +117,6 @@
             this.txttelefono.Size = new System.Drawing.Size(100, 20);
             this.txttelefono.TabIndex = 7;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 265);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(39, 17);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Sexo";
-            // 
-            // txtsexo
-            // 
-            this.txtsexo.Location = new System.Drawing.Point(12, 285);
-            this.txtsexo.Name = "txtsexo";
-            this.txtsexo.Size = new System.Drawing.Size(36, 20);
-            this.txtsexo.TabIndex = 9;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -165,7 +147,7 @@
             // btn_crear
             // 
             this.btn_crear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_crear.Location = new System.Drawing.Point(12, 470);
+            this.btn_crear.Location = new System.Drawing.Point(12, 348);
             this.btn_crear.Name = "btn_crear";
             this.btn_crear.Size = new System.Drawing.Size(79, 27);
             this.btn_crear.TabIndex = 13;
@@ -177,35 +159,35 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(7, 362);
+            this.label7.Location = new System.Drawing.Point(7, 283);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(135, 25);
             this.label7.TabIndex = 14;
             this.label7.Text = "Departamento";
             // 
-            // textBox2
+            // txtdepartamento
             // 
-            this.textBox2.AutoCompleteCustomSource.AddRange(new string[] {
+            this.txtdepartamento.AutoCompleteCustomSource.AddRange(new string[] {
             "TI",
             "Recursos humanos",
             "Financias",
             "Ventas"});
-            this.textBox2.Location = new System.Drawing.Point(12, 390);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 15;
+            this.txtdepartamento.Location = new System.Drawing.Point(12, 311);
+            this.txtdepartamento.Multiline = true;
+            this.txtdepartamento.Name = "txtdepartamento";
+            this.txtdepartamento.Size = new System.Drawing.Size(100, 20);
+            this.txtdepartamento.TabIndex = 15;
             // 
-            // button1
+            // btnactualizar
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(97, 470);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(79, 27);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Actualizar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.btnactualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnactualizar.Location = new System.Drawing.Point(97, 348);
+            this.btnactualizar.Name = "btnactualizar";
+            this.btnactualizar.Size = new System.Drawing.Size(79, 27);
+            this.btnactualizar.TabIndex = 16;
+            this.btnactualizar.Text = "Actualizar";
+            this.btnactualizar.UseVisualStyleBackColor = true;
+            this.btnactualizar.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // button2
             // 
@@ -218,21 +200,30 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(183, 351);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 18;
+            this.button3.Text = "Borrar";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(572, 566);
+            this.ClientSize = new System.Drawing.Size(581, 451);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.btnactualizar);
+            this.Controls.Add(this.txtdepartamento);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btn_crear);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtcedula);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtsexo);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.txttelefono);
             this.Controls.Add(this.txtapellido);
             this.Controls.Add(this.txtnombre);
@@ -259,15 +250,14 @@
         private System.Windows.Forms.TextBox txtnombre;
         private System.Windows.Forms.TextBox txtapellido;
         private System.Windows.Forms.TextBox txttelefono;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtsexo;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtcedula;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btn_crear;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txtdepartamento;
+        private System.Windows.Forms.Button btnactualizar;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }

@@ -28,5 +28,21 @@ namespace GalvinSantosCRUDtarea3
             Lista_empleados form = new Lista_empleados();
             form.Show();
         }
+
+        private void nuevoToolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void departamentoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void verToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Cargo form = new Cargo();
+            form.Show();
+        }
     }
 }
