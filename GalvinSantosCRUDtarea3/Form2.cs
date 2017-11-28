@@ -26,8 +26,21 @@ namespace GalvinSantosCRUDtarea3
 
         private void button1_Click(object sender, EventArgs e)
         {
-            operacion oper = new operacion();
-            oper.ConsultaSinResultado (" INSERT INTO empleado (nombre, apellido,telefono,cedula)VALUES('" + txtnombre.Text.ToString() + "','" + txtapellido.Text.ToString() + "','" + txttelefono.Text.ToString() + "','" + txtcedula.Text.ToString() + "',)");
+           try
+            {
+                operacion oper = new operacion();
+                oper.ConsultaSinResultado(" INSERT INTO empleado (nombre, apellido, telefono, cedula) VALUES ('" + txtnombre.Text.ToString() + "','" + txtapellido.Text.ToString() + "','" + txttelefono.Text.ToString() + "','" + txtcedula.Text.ToString() + "')");          
+            }
+            catch (Exception ex)
+
+            {
+                MessageBox.Show (ex.Message);
+            }
+
+            finally
+            {
+                MessageBox.Show("Muchas gracias");
+            }
         }
 
         private void button1_Click_1(object sender, EventArgs e)
