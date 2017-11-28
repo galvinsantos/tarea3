@@ -70,13 +70,27 @@ namespace GalvinSantosCRUDtarea3
                 if (fila["apellido"] != null) txtapellido.Text = fila["apellido"].ToString();
                 if (fila["telefono"] != null) txttelefono.Text = fila["telefono"].ToString();
                 if (fila["cedula"] != null) txtcedula.Text = fila["cedula"].ToString();
-}
+                
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            operacion oper = new operacion();
-            oper.ConsultaSinResultado(" DELETE FROM empleado WHERE id='" + txtid.Text + "' ");
+            try
+            {
+                operacion oper = new operacion();
+                oper.ConsultaSinResultado(" DELETE FROM empleado WHERE id='" + txtid.Text + "' ");
+            }
+            catch (Exception ex)
+            
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                MessageBox.Show("El contenido a sido eliminado");
+            }
+
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -88,10 +102,10 @@ namespace GalvinSantosCRUDtarea3
         {
 
             operacion oper = new operacion();
-            DataSet ds = oper.ConsultaConResultado(" select * from departamento ");
+            DataSet ds = oper.ConsultaConResultado(" select * from cargo ");
             cmbdepartamento.DataSource = ds.Tables[0];
             cmbdepartamento.ValueMember = "id";
-            cmbdepartamento.DisplayMember = "nombre";
+            cmbdepartamento.DisplayMember = "departamento";
 
         }
     }

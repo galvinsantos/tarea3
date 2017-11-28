@@ -54,7 +54,7 @@ namespace GalvinSantosCRUDtarea3
         {
 
             operacion oper = new operacion();
-            DataSet ds = oper.ConsultaConResultado(" select * from departamento ");
+            DataSet ds = oper.ConsultaConResultado(" select * from cargo ");
             cmbdepartamento.DataSource = ds.Tables[0];
             cmbdepartamento.ValueMember = "id";
             cmbdepartamento.DisplayMember = "nombre";
