@@ -61,16 +61,22 @@ namespace GalvinSantosCRUDtarea3
 
         private void buscar(string id)
         {
-            operacion oper = new operacion();
-            DataSet ds = oper.ConsultaConResultado("SELECT * FROM empleado WHERE id='" + txtid.Text + "' ");
-            foreach (DataRow fila in ds.Tables[0].Rows)
+            try
             {
-                if (fila["id"] != null) txtid.Text = fila["id"].ToString();
-                if (fila["nombre"] != null) txtnombre.Text = fila["nombre"].ToString();
-                if (fila["apellido"] != null) txtapellido.Text = fila["apellido"].ToString();
-                if (fila["telefono"] != null) txttelefono.Text = fila["telefono"].ToString();
-                if (fila["cedula"] != null) txtcedula.Text = fila["cedula"].ToString();
-                
+                operacion oper = new operacion();
+                DataSet ds = oper.ConsultaConResultado("SELECT * FROM empleado WHERE id='" + txtid.Text + "' ");
+                foreach (DataRow fila in ds.Tables[0].Rows)
+                {
+                    if (fila["id"] != null) txtid.Text = fila["id"].ToString();
+                    if (fila["nombre"] != null) txtnombre.Text = fila["nombre"].ToString();
+                    if (fila["apellido"] != null) txtapellido.Text = fila["apellido"].ToString();
+                    if (fila["telefono"] != null) txttelefono.Text = fila["telefono"].ToString();
+                    if (fila["cedula"] != null) txtcedula.Text = fila["cedula"].ToString();
+                }
+            }
+            catch (Exception)
+            {
+
             }
         }
 
@@ -96,16 +102,7 @@ namespace GalvinSantosCRUDtarea3
         private void Form2_Load(object sender, EventArgs e)
         {
             //dfgdfgdfg
-        }
-
-        private void llena_departamento()
-        {
-
-            operacion oper = new operacion();
-            DataSet ds = oper.ConsultaConResultado(" select * from cargo ");
-            cmbdepartamento.DataSource = ds.Tables[0];
-            cmbdepartamento.ValueMember = "id";
-            cmbdepartamento.DisplayMember = "departamento";
+ 
 
         }
     }

@@ -18,15 +18,16 @@ namespace GalvinSantosCRUDtarea3
         }
 
         private void Lista_empleados_Load(object sender, EventArgs e)
-        {
-       
-        
-     
+        {       
             operacion oper = new operacion();
             DataSet ds = oper.ConsultaConResultado(" select empleado.id, empleado.nombre, empleado.apellido, empleado.telefono, empleado.cedula, cargo.departamento from empleado,cargo where empleado.id = cargo.id; ");
             dataGridView1.DataSource = ds.Tables[0];
         }
-
+        private void dataGridView1_DoubleClick(object sender, EventArgs e)
+        {
+            Form2 frm = new Form2 (dataGridView1.CurrentRow.Cells[0].Value.ToString());
+            frm.ShowDialog();
+        }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
