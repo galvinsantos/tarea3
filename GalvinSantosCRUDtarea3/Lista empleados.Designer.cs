@@ -48,7 +48,7 @@
             // 
             // btnborrar
             // 
-            this.btnborrar.Location = new System.Drawing.Point(581, 133);
+            this.btnborrar.Location = new System.Drawing.Point(219, 133);
             this.btnborrar.Name = "btnborrar";
             this.btnborrar.Size = new System.Drawing.Size(75, 23);
             this.btnborrar.TabIndex = 1;
@@ -72,6 +72,8 @@
             this.listView1.Size = new System.Drawing.Size(121, 97);
             this.listView1.TabIndex = 4;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // Lista_empleados
             // 

@@ -22,6 +22,8 @@ namespace GalvinSantosCRUDtarea3
             operacion oper = new operacion();
             DataSet ds = oper.ConsultaConResultado(" select empleado.id, empleado.nombre, empleado.apellido, empleado.telefono, empleado.cedula, cargo.departamento from empleado,cargo where empleado.id = cargo.id; ");
             dataGridView1.DataSource = ds.Tables[0];
+
+           
         }
         private void dataGridView1_DoubleClick(object sender, EventArgs e)
         {
@@ -45,5 +47,10 @@ namespace GalvinSantosCRUDtarea3
         {
 
         }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }   
     }
 }

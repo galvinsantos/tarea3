@@ -26,15 +26,15 @@ namespace GalvinSantosCRUDtarea3
 
         private void button1_Click(object sender, EventArgs e)
         {
-           try
+            try
             {
                 operacion oper = new operacion();
-                oper.ConsultaSinResultado(" INSERT INTO empleado (nombre, apellido, telefono, cedula) VALUES ('" + txtnombre.Text.ToString() + "','" + txtapellido.Text.ToString() + "','" + txttelefono.Text.ToString() + "','" + txtcedula.Text.ToString() + "')");          
+                oper.ConsultaSinResultado(" INSERT INTO empleado (nombre, apellido, telefono, cedula) VALUES ('" + txtnombre.Text.ToString() + "','" + txtapellido.Text.ToString() + "','" + txttelefono.Text.ToString() + "','" + txtcedula.Text.ToString() + "')");
             }
             catch (Exception ex)
 
             {
-                MessageBox.Show (ex.Message);
+                MessageBox.Show(ex.Message);
             }
 
             finally
@@ -45,18 +45,29 @@ namespace GalvinSantosCRUDtarea3
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            operacion oper = new operacion();
-            oper.ConsultaSinResultado(" UPDATE empleado SET nombre='" + txtnombre.Text.ToString() + "', apellido='" + txtapellido.Text.ToString() + "', telefono'" + txttelefono.Text.ToString() + "', cedula'" + txtcedula.Text.ToString() + "' WHERE id='" + txtid.Text + "' ");
+            try
+            {
+                operacion oper = new operacion();
+                oper.ConsultaSinResultado(" UPDATE empleado SET nombre='" + txtnombre.Text.ToString() + "', apellido='" + txtapellido.Text.ToString() + "', telefono'" + txttelefono.Text.ToString() + "', cedula'" + txtcedula.Text.ToString() + "' WHERE id='" + txtid.Text + "' ");
+            }
+            catch
+            {
+
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            buscar(txtid.Text);
-            buscar(txtid.Text);
-            buscar(txtid.Text);
-            buscar(txtid.Text);
-            buscar(txtid.Text);
-            buscar(txtid.Text);
+            try
+            {
+                buscar(txtid.Text);
+               
+            }
+            catch (Exception)
+            {
+
+            }
+           
         }
 
         private void buscar(string id)
@@ -74,9 +85,13 @@ namespace GalvinSantosCRUDtarea3
                     if (fila["cedula"] != null) txtcedula.Text = fila["cedula"].ToString();
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                MessageBox.Show("Lo encontre :D ");
             }
         }
 
@@ -88,7 +103,7 @@ namespace GalvinSantosCRUDtarea3
                 oper.ConsultaSinResultado(" DELETE FROM empleado WHERE id='" + txtid.Text + "' ");
             }
             catch (Exception ex)
-            
+
             {
                 MessageBox.Show(ex.Message);
             }
@@ -102,7 +117,7 @@ namespace GalvinSantosCRUDtarea3
         private void Form2_Load(object sender, EventArgs e)
         {
             //dfgdfgdfg
- 
+
 
         }
     }

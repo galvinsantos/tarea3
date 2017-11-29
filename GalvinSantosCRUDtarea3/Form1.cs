@@ -49,5 +49,10 @@ namespace GalvinSantosCRUDtarea3
         {
 
         }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }
