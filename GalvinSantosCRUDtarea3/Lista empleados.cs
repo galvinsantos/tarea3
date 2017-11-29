@@ -31,19 +31,19 @@ namespace GalvinSantosCRUDtarea3
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-           
-
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
+            Form2 frm = new Form2(dataGridView1.CurrentRow.Cells[0].Value.ToString());
+            frm.ShowDialog();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Form2 form = new Form2();
             form.Show();
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
