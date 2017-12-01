@@ -160,10 +160,10 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(7, 283);
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(7, 233);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(135, 25);
+            this.label7.Size = new System.Drawing.Size(110, 17);
             this.label7.TabIndex = 14;
             this.label7.Text = "Departamento";
             // 
@@ -183,7 +183,7 @@
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(76, 22);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(79, 27);
+            this.button2.Size = new System.Drawing.Size(66, 27);
             this.button2.TabIndex = 17;
             this.button2.Text = "Buscar";
             this.button2.UseVisualStyleBackColor = true;
@@ -201,7 +201,7 @@
             // 
             // txtdepartamento
             // 
-            this.txtdepartamento.Location = new System.Drawing.Point(10, 312);
+            this.txtdepartamento.Location = new System.Drawing.Point(10, 253);
             this.txtdepartamento.Name = "txtdepartamento";
             this.txtdepartamento.Size = new System.Drawing.Size(132, 20);
             this.txtdepartamento.TabIndex = 19;

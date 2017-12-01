@@ -30,6 +30,8 @@ namespace GalvinSantosCRUDtarea3
             {
                 operacion oper = new operacion();
                 oper.ConsultaSinResultado(" INSERT INTO empleado (nombre, apellido, telefono, cedula) VALUES ('" + txtnombre.Text.ToString() + "','" + txtapellido.Text.ToString() + "','" + txttelefono.Text.ToString() + "','" + txtcedula.Text.ToString() + "')");
+                operacion dep = new operacion();
+                dep.ConsultaSinResultado(" INSERT INTO cargo (departamento) VALUES ('" + txtdepartamento.Text.ToString() + "')");
             }
             catch (Exception ex)
 
@@ -39,7 +41,7 @@ namespace GalvinSantosCRUDtarea3
 
             finally
             {
-                MessageBox.Show("Muchas gracias");
+                MessageBox.Show(" La información fue insertada correctamente ");
             }
         }
 
@@ -49,6 +51,9 @@ namespace GalvinSantosCRUDtarea3
             {
                 operacion oper = new operacion();
                 oper.ConsultaSinResultado(" UPDATE empleado SET nombre='" + txtnombre.Text.ToString() + "', apellido='" + txtapellido.Text.ToString() + "', telefono'" + txttelefono.Text.ToString() + "', cedula'" + txtcedula.Text.ToString() + "' WHERE id='" + txtid.Text + "' ");
+                operacion dep = new operacion();
+                dep.ConsultaSinResultado(" UPDATE cargo SET departamento='" + txtdepartamento.Text.ToString() + "' WHERE id='" + txtid.Text + "' ");
+
             }
             catch
             {
@@ -70,6 +75,8 @@ namespace GalvinSantosCRUDtarea3
         {
             try
             {
+                //connectar a la base de datos para poder encontrar la informacion via el "id"
+
                 operacion oper = new operacion();
                 DataSet ds = oper.ConsultaConResultado("SELECT * FROM empleado WHERE id='" + txtid.Text + "' ");
                 foreach (DataRow fila in ds.Tables[0].Rows)
@@ -96,7 +103,8 @@ namespace GalvinSantosCRUDtarea3
             }
             finally
             {
-                MessageBox.Show("Lo encontre :D ");
+               
+                MessageBox.Show("Has encontrado la información :D ");
             }
         }
 
@@ -121,7 +129,7 @@ namespace GalvinSantosCRUDtarea3
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            //dfgdfgdfg
+            
 
         
 
