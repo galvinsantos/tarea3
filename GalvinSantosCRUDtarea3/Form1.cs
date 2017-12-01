@@ -54,5 +54,11 @@ namespace GalvinSantosCRUDtarea3
         {
 
         }
+
+        private void verNominaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Nomina form = new Nomina();
+            form.Show();
+        }
     }
 }

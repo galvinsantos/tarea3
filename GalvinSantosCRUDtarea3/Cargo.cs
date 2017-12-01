@@ -24,6 +24,7 @@ namespace GalvinSantosCRUDtarea3
 
         private void buscar(string id)
         {
+            //busqueda de cargo
             operacion oper = new operacion();
             DataSet ds = oper.ConsultaConResultado("SELECT * FROM cargo WHERE id='" + txtidcargo.Text + "' ");
             foreach (DataRow fila in ds.Tables[0].Rows)
