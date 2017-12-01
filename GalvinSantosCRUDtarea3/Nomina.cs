@@ -20,7 +20,7 @@ namespace GalvinSantosCRUDtarea3
         private void Nomina_Load(object sender, EventArgs e)
         {
             //
-
+            
         }
         public void loadData()
         {
