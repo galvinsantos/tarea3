@@ -47,17 +47,16 @@ namespace GalvinSantosCRUDtarea3
 
         private void Cargo_Load(object sender, EventArgs e)
         {
-            //ksbfk baskfskabf ks  kbb  sdbkbsfksk 
+            //tabla de cargo
+            operacion oper = new operacion();
+            DataSet ds = oper.ConsultaConResultado(" select empleado.id, empleado.nombre, empleado.apellido, empleado.estatus, cargo.departamento from empleado,cargo where empleado.id = cargo.id; ");
+            dataGridView1.DataSource = ds.Tables[0];
         }
 
         private void llena_departamento()
         {
 
-            operacion oper = new operacion();
-            DataSet ds = oper.ConsultaConResultado(" select * from cargo ");
-            cmbdepartamento.DataSource = ds.Tables[0];
-            cmbdepartamento.ValueMember = "id";
-            cmbdepartamento.DisplayMember = "nombre";
+            //no nesesario
         }
 
         private void btnactualizar_Click(object sender, EventArgs e)
