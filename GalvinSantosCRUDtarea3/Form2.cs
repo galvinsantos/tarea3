@@ -75,6 +75,7 @@ namespace GalvinSantosCRUDtarea3
                 foreach (DataRow fila in ds.Tables[0].Rows)
 
                 {
+
                     if (fila["id"] != null) txtid.Text = fila["id"].ToString();
                     if (fila["nombre"] != null) txtnombre.Text = fila["nombre"].ToString();
                     if (fila["apellido"] != null) txtapellido.Text = fila["apellido"].ToString();
