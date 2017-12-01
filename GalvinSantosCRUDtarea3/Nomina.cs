@@ -16,5 +16,18 @@ namespace GalvinSantosCRUDtarea3
         {
             InitializeComponent();
         }
+
+        private void Nomina_Load(object sender, EventArgs e)
+        {
+            //
+
+        }
+
+
+        private void btnbuscar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
+    
 }
