@@ -32,16 +32,18 @@
             this.btnbuscar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.txtnomina = new System.Windows.Forms.TextBox();
+            this.listView1 = new System.Windows.Forms.ListView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 113);
+            this.dataGridView1.Location = new System.Drawing.Point(184, 123);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(808, 199);
+            this.dataGridView1.Size = new System.Drawing.Size(636, 189);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btnbuscar
             // 
@@ -69,11 +71,21 @@
             this.txtnomina.Size = new System.Drawing.Size(45, 20);
             this.txtnomina.TabIndex = 3;
             // 
+            // listView1
+            // 
+            this.listView1.Location = new System.Drawing.Point(13, 123);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(165, 189);
+            this.listView1.TabIndex = 4;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            // 
             // Nomina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(832, 402);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.txtnomina);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnbuscar);
@@ -93,5 +105,6 @@
         private System.Windows.Forms.Button btnbuscar;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox txtnomina;
+        private System.Windows.Forms.ListView listView1;
     }
 }
