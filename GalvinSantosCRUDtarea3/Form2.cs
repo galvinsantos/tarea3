@@ -89,7 +89,6 @@ namespace GalvinSantosCRUDtarea3
                     if (fila["departamento"] != null) txtdepartamento.Text = fila["departamento"].ToString();
                 }
                  
-            
             }
             catch (Exception ex)
             {
