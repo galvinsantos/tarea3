@@ -58,16 +58,9 @@ namespace GalvinSantosCRUDtarea3
 
         private void button2_Click(object sender, EventArgs e)
         {
-            try
-            {
-                buscar(txtid.Text);
-               
-            }
-            catch (Exception)
-            {
 
-            }
-           
+            buscar(txtid.Text);
+
         }
 
         private void buscar(string id)
@@ -77,13 +70,22 @@ namespace GalvinSantosCRUDtarea3
                 operacion oper = new operacion();
                 DataSet ds = oper.ConsultaConResultado("SELECT * FROM empleado WHERE id='" + txtid.Text + "' ");
                 foreach (DataRow fila in ds.Tables[0].Rows)
+
                 {
                     if (fila["id"] != null) txtid.Text = fila["id"].ToString();
                     if (fila["nombre"] != null) txtnombre.Text = fila["nombre"].ToString();
                     if (fila["apellido"] != null) txtapellido.Text = fila["apellido"].ToString();
                     if (fila["telefono"] != null) txttelefono.Text = fila["telefono"].ToString();
-                    if (fila["cedula"] != null) txtcedula.Text = fila["cedula"].ToString();
+                    if (fila["cedula"] != null) txtcedula.Text = fila["cedula"].ToString();     
                 }
+                operacion dep = new operacion();
+                DataSet dt = dep.ConsultaConResultado("SELECT departamento FROM cargo WHERE id='" + txtid.Text + "' ");
+                foreach (DataRow fila in dt.Tables[0].Rows)
+                {
+                    if (fila["departamento"] != null) txtdepartamento.Text = fila["departamento"].ToString();
+                }
+                    
+
             }
             catch (Exception ex)
             {
@@ -118,6 +120,11 @@ namespace GalvinSantosCRUDtarea3
         {
             //dfgdfgdfg
 
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
 
         }
     }

@@ -45,74 +45,75 @@
             this.btnactualizar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.cmbdepartamento = new System.Windows.Forms.ComboBox();
+            this.txtdepartamento = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 9);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(7, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(21, 17);
+            this.label1.Size = new System.Drawing.Size(19, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "ID";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(7, 61);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 25);
+            this.label2.Size = new System.Drawing.Size(64, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nombre";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(7, 112);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(7, 104);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 25);
+            this.label3.Size = new System.Drawing.Size(66, 17);
             this.label3.TabIndex = 2;
             this.label3.Text = "Apellido";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(7, 163);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(7, 190);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 25);
+            this.label4.Size = new System.Drawing.Size(72, 17);
             this.label4.TabIndex = 3;
             this.label4.Text = "Telefono";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // txtid
             // 
-            this.txtid.Location = new System.Drawing.Point(12, 29);
+            this.txtid.Location = new System.Drawing.Point(10, 29);
             this.txtid.Name = "txtid";
             this.txtid.Size = new System.Drawing.Size(36, 20);
             this.txtid.TabIndex = 4;
             // 
             // txtnombre
             // 
-            this.txtnombre.Location = new System.Drawing.Point(12, 89);
+            this.txtnombre.Location = new System.Drawing.Point(10, 81);
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(100, 20);
             this.txtnombre.TabIndex = 5;
             // 
             // txtapellido
             // 
-            this.txtapellido.Location = new System.Drawing.Point(12, 140);
+            this.txtapellido.Location = new System.Drawing.Point(10, 124);
             this.txtapellido.Name = "txtapellido";
-            this.txtapellido.Size = new System.Drawing.Size(100, 20);
+            this.txtapellido.Size = new System.Drawing.Size(143, 20);
             this.txtapellido.TabIndex = 6;
             // 
             // txttelefono
             // 
-            this.txttelefono.Location = new System.Drawing.Point(12, 191);
+            this.txttelefono.Location = new System.Drawing.Point(10, 210);
             this.txttelefono.Name = "txttelefono";
             this.txttelefono.Size = new System.Drawing.Size(100, 20);
             this.txttelefono.TabIndex = 7;
@@ -120,25 +121,25 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(7, 214);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(7, 147);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(75, 25);
+            this.label6.Size = new System.Drawing.Size(58, 17);
             this.label6.TabIndex = 10;
             this.label6.Text = "Cedula";
             // 
             // txtcedula
             // 
-            this.txtcedula.Location = new System.Drawing.Point(12, 242);
+            this.txtcedula.Location = new System.Drawing.Point(10, 167);
             this.txtcedula.Name = "txtcedula";
-            this.txtcedula.Size = new System.Drawing.Size(100, 20);
+            this.txtcedula.Size = new System.Drawing.Size(143, 20);
             this.txtcedula.TabIndex = 11;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(362, 29);
+            this.pictureBox1.Location = new System.Drawing.Point(332, 20);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(195, 210);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -198,20 +199,19 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // cmbdepartamento
+            // txtdepartamento
             // 
-            this.cmbdepartamento.FormattingEnabled = true;
-            this.cmbdepartamento.Location = new System.Drawing.Point(12, 311);
-            this.cmbdepartamento.Name = "cmbdepartamento";
-            this.cmbdepartamento.Size = new System.Drawing.Size(121, 21);
-            this.cmbdepartamento.TabIndex = 19;
+            this.txtdepartamento.Location = new System.Drawing.Point(10, 312);
+            this.txtdepartamento.Name = "txtdepartamento";
+            this.txtdepartamento.Size = new System.Drawing.Size(132, 20);
+            this.txtdepartamento.TabIndex = 19;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(581, 451);
-            this.Controls.Add(this.cmbdepartamento);
+            this.ClientSize = new System.Drawing.Size(529, 428);
+            this.Controls.Add(this.txtdepartamento);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnactualizar);
@@ -256,6 +256,6 @@
         private System.Windows.Forms.Button btnactualizar;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.ComboBox cmbdepartamento;
+        private System.Windows.Forms.TextBox txtdepartamento;
     }
 }
