@@ -26,6 +26,7 @@ namespace GalvinSantosCRUDtarea3
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //Botón de crear
             try
             {
                 operacion oper = new operacion();
@@ -47,21 +48,25 @@ namespace GalvinSantosCRUDtarea3
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            //Botón de actualizar
             try
             {
                 operacion oper = new operacion();
-                oper.ConsultaSinResultado(" UPDATE empleado SET nombre='" + txtnombre.Text.ToString() + "', apellido='" + txtapellido.Text.ToString() + "', telefono'" + txttelefono.Text.ToString() + "', cedula'" + txtcedula.Text.ToString() + "' WHERE id='" + txtid.Text + "' ");
+                oper.ConsultaSinResultado(" UPDATE empleado SET nombre='" + txtnombre.Text.ToString() + "', apellido='" + txtapellido.Text.ToString() + "', cedula= '" + txtcedula.Text.ToString() + "', telefono='" + txttelefono.Text.ToString() + "' WHERE id= '" + txtid.Text + "' ");
                 operacion dep = new operacion();
-                dep.ConsultaSinResultado(" UPDATE cargo SET departamento='" + txtdepartamento.Text.ToString() + "' WHERE id='" + txtid.Text + "' ");
+                dep.ConsultaSinResultado(" UPDATE cargo SET departamento='" + txtdepartamento.Text.ToString() + "' WHERE id= '" + txtid.Text + "' ");
 
             }
-            catch
+            catch (Exception ex)
             {
+                MessageBox.Show(ex.Message);
 
-
-
-            
             }
+            finally
+            {
+                MessageBox.Show("Se ha actualizado correctamente");
+            }
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
