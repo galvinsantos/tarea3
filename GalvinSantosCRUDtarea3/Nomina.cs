@@ -29,7 +29,8 @@ namespace GalvinSantosCRUDtarea3
             catch
             {
 
-            }                  
+            }  
+            
 
         }
         public void loadData()
