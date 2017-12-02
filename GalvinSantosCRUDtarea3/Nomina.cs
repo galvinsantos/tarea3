@@ -20,9 +20,17 @@ namespace GalvinSantosCRUDtarea3
         private void Nomina_Load(object sender, EventArgs e)
             //vista detalles nomina
         {
-            operacion oper = new operacion();
-            DataSet ds = oper.ConsultaConResultado("SELECT * FROM detalle_nomina");
-            dataGridView1.DataSource = ds.Tables[0];
+            try
+            {
+                operacion oper = new operacion();
+                DataSet ds = oper.ConsultaConResultado("SELECT * FROM detalle_nomina");
+                dataGridView1.DataSource = ds.Tables[0];
+                
+            }
+            catch
+            {
+
+            }                  
 
         }
         public void loadData()
@@ -49,6 +57,14 @@ namespace GalvinSantosCRUDtarea3
         {
             
         }
+
+        private void btnimprimir_Click(object sender, EventArgs e)
+        {
+            
+               
+            
+        }
+    
     }
     
 }

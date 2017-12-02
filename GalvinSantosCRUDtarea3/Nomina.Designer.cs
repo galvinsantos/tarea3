@@ -30,7 +30,7 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnbuscar = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnimprimir = new System.Windows.Forms.Button();
             this.txtnomina = new System.Windows.Forms.TextBox();
             this.listView1 = new System.Windows.Forms.ListView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -55,14 +55,15 @@
             this.btnbuscar.UseVisualStyleBackColor = true;
             this.btnbuscar.Click += new System.EventHandler(this.btnbuscar_Click);
             // 
-            // button2
+            // btnimprimir
             // 
-            this.button2.Location = new System.Drawing.Point(95, 318);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnimprimir.Location = new System.Drawing.Point(95, 318);
+            this.btnimprimir.Name = "btnimprimir";
+            this.btnimprimir.Size = new System.Drawing.Size(75, 23);
+            this.btnimprimir.TabIndex = 2;
+            this.btnimprimir.Text = "Imprimir";
+            this.btnimprimir.UseVisualStyleBackColor = true;
+            this.btnimprimir.Click += new System.EventHandler(this.btnimprimir_Click);
             // 
             // txtnomina
             // 
@@ -87,7 +88,7 @@
             this.ClientSize = new System.Drawing.Size(832, 402);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.txtnomina);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnimprimir);
             this.Controls.Add(this.btnbuscar);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Nomina";
@@ -103,7 +104,7 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnbuscar;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnimprimir;
         private System.Windows.Forms.TextBox txtnomina;
         private System.Windows.Forms.ListView listView1;
     }

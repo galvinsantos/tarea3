@@ -18,10 +18,17 @@ namespace GalvinSantosCRUDtarea3
         }
 
         private void Lista_empleados_Load(object sender, EventArgs e)
-        {       
-            operacion oper = new operacion();
-            DataSet ds = oper.ConsultaConResultado(" select empleado.id, empleado.nombre, empleado.apellido, empleado.telefono, empleado.cedula, cargo.departamento from empleado,cargo where empleado.id = cargo.id; ");
-            dataGridView1.DataSource = ds.Tables[0];
+        {    //ver lista de los empleados
+            try
+            {
+                operacion oper = new operacion();
+                DataSet ds = oper.ConsultaConResultado(" select empleado.id, empleado.nombre, empleado.apellido, empleado.telefono, empleado.cedula, cargo.departamento from empleado,cargo where empleado.id = cargo.id; ");
+                dataGridView1.DataSource = ds.Tables[0];
+            }
+            catch
+            {
+
+            }
 
            
         }
@@ -51,6 +58,36 @@ namespace GalvinSantosCRUDtarea3
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-        }   
+        }
+
+        private void btnborrar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnborrar_Click_1(object sender, EventArgs e)
+        {
+            try
+            {
+                foreach (DataGridViewRow item in this.dataGridView1.SelectedRows)
+                {
+                    dataGridView1.Rows.RemoveAt(item.Index);
+                }
+            }
+            catch (Exception ex)
+
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                MessageBox.Show("El contenido a sido eliminado");
+            }
+        }
     }
 }
