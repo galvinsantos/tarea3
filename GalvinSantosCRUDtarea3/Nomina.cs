@@ -24,8 +24,7 @@ namespace GalvinSantosCRUDtarea3
             {
                 operacion oper = new operacion();
                 DataSet ds = oper.ConsultaConResultado("SELECT * FROM detalle_nomina");
-                dataGridView1.DataSource = ds.Tables[0];
-                
+                dataGridView1.DataSource = ds.Tables[0];              
             }
             catch
             {
