@@ -16,14 +16,14 @@ namespace GalvinSantosCRUDtarea3 {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class CrystalReport1 : ReportClass {
+    public class reportenomina : ReportClass {
         
-        public CrystalReport1() {
+        public reportenomina() {
         }
         
         public override string ResourceName {
             get {
-                return "CrystalReport1.rpt";
+                return "reportenomina.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace GalvinSantosCRUDtarea3 {
         
         public override string FullResourceName {
             get {
-                return "GalvinSantosCRUDtarea3.CrystalReport1.rpt";
+                return "GalvinSantosCRUDtarea3.reportenomina.rpt";
             }
             set {
                 // Do nothing
@@ -90,9 +90,9 @@ namespace GalvinSantosCRUDtarea3 {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedCrystalReport1 : Component, ICachedReport {
+    public class Cachedreportenomina : Component, ICachedReport {
         
-        public CachedCrystalReport1() {
+        public Cachedreportenomina() {
         }
         
         [Browsable(false)]
@@ -129,7 +129,7 @@ namespace GalvinSantosCRUDtarea3 {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            CrystalReport1 rpt = new CrystalReport1();
+            reportenomina rpt = new reportenomina();
             rpt.Site = this.Site;
             return rpt;
         }
