@@ -89,5 +89,14 @@ namespace GalvinSantosCRUDtarea3
                 MessageBox.Show("El contenido a sido eliminado");
             }
         }
+
+        private void btnimprimir_Click(object sender, EventArgs e)
+        {
+            operacion oper = new operacion();
+            DataSet ds = oper.ConsultaConResultado(" select empleado.id, empleado.nombre, empleado.apellido, empleado.telefono, empleado.cedula, cargo.departamento from empleado,cargo where empleado.id = cargo.id;");
+            ds.WriteXml("c:\\Sistemas\\tarea3.xml");
+            reportviewer f = new reportviewer("Reporte3.rpt");
+            f.Show();
+        }
     }
 }

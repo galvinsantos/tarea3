@@ -31,6 +31,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.btnborrar = new System.Windows.Forms.Button();
+            this.btnimprimir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,11 +66,22 @@
             this.btnborrar.UseVisualStyleBackColor = true;
             this.btnborrar.Click += new System.EventHandler(this.btnborrar_Click_1);
             // 
+            // btnimprimir
+            // 
+            this.btnimprimir.Location = new System.Drawing.Point(174, 25);
+            this.btnimprimir.Name = "btnimprimir";
+            this.btnimprimir.Size = new System.Drawing.Size(75, 23);
+            this.btnimprimir.TabIndex = 5;
+            this.btnimprimir.Text = "Imprimir";
+            this.btnimprimir.UseVisualStyleBackColor = true;
+            this.btnimprimir.Click += new System.EventHandler(this.btnimprimir_Click);
+            // 
             // Lista_empleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(652, 389);
+            this.Controls.Add(this.btnimprimir);
             this.Controls.Add(this.btnborrar);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
@@ -88,5 +100,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnborrar;
+        private System.Windows.Forms.Button btnimprimir;
     }
 }
