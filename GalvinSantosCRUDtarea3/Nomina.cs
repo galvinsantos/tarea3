@@ -23,24 +23,17 @@ namespace GalvinSantosCRUDtarea3
             try
             {
                 operacion oper = new operacion();                
-                DataSet ds = oper.ConsultaConResultado(" select empleado.id, empleado.nombre, empleado.apellido, empleado.cedula, sueldo, (sueldo * ss) as 'descuento ss', (sueldo * isr) as 'descuento isr', (sueldo * .19) as 'descuento total', sueldo - (sueldo * .19) as 'sueldo neto' from empleado,detalle_nomina where empleado.id = detalle_nomina.id; ");
-                // DataSet ds = oper.ConsultaConResultado(" select empleado.id, empleado.nombre, empleado.apellido, empleado.cedula, sueldo, sueldo* ss as 'descuento ss', sueldo* isr as 'descuento isr', (sueldo * ss) as 'descuento ss', (sueldo * isr) as 'descuento isr', (sueldo * .19) as 'descuento total', sueldo - (sueldo * .19) as 'sueldo neto' from empleado,detalle_nomina where empleado.id = detalle_nomina.id;");             
+                DataSet ds = oper.ConsultaConResultado(" select empleado.id, empleado.nombre, empleado.apellido, empleado.cedula, sueldo, (sueldo * ss) as 'descuento ss', (sueldo * isr) as 'descuento isr', (sueldo * .19) as 'descuento total', sueldo - (sueldo * .19) as 'sueldo neto' from empleado,detalle_nomina where empleado.id = detalle_nomina.id; ");                           
                 dataGridView1.DataSource = ds.Tables[0];
 
             }
-            catch (Exception)
-
+            catch
             {
-                MessageBox.Show("La información se cargó correctamente");
-            }
 
-
+            }      
 
         }
-        public void loadData()
-        {
 
-        }
 
         private void btnbuscar_Click(object sender, EventArgs e)
         {
@@ -64,11 +57,35 @@ namespace GalvinSantosCRUDtarea3
 
         private void btnimprimir_Click(object sender, EventArgs e)
         {
-
+            // Exportando la data a formato XML
+            operacion oper = new operacion();
+            DataSet ds = oper.ConsultaConResultado(" select empleado.id, empleado.nombre, empleado.apellido, empleado.cedula, sueldo, (sueldo * ss) as 'descuento ss', (sueldo * isr) as 'descuento isr', (sueldo * .19) as 'descuento total', sueldo - (sueldo * .19) as 'sueldo neto' from empleado,detalle_nomina where empleado.id = detalle_nomina.id;");
+            ds.WriteXml("c:\\Sistemas\\tarea4.xml");
+            reportviewer2 b = new reportviewer2 ("reportnomina.rpt");
+            b.Show();
 
 
         }
 
+        private void btnborrar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                foreach (DataGridViewRow item in this.dataGridView1.SelectedRows)
+                {
+                    dataGridView1.Rows.RemoveAt(item.Index);
+                }
+            }
+            catch (Exception ex)
+
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                MessageBox.Show("El contenido a sido eliminado");
+            }
+        }
     }
 
 }

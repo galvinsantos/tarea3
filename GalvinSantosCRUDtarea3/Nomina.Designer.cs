@@ -32,6 +32,7 @@
             this.btnbuscar = new System.Windows.Forms.Button();
             this.btnimprimir = new System.Windows.Forms.Button();
             this.txtnomina = new System.Windows.Forms.TextBox();
+            this.btnborrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,11 +72,22 @@
             this.txtnomina.Size = new System.Drawing.Size(45, 20);
             this.txtnomina.TabIndex = 3;
             // 
+            // btnborrar
+            // 
+            this.btnborrar.Location = new System.Drawing.Point(875, 94);
+            this.btnborrar.Name = "btnborrar";
+            this.btnborrar.Size = new System.Drawing.Size(75, 23);
+            this.btnborrar.TabIndex = 4;
+            this.btnborrar.Text = "Borrar";
+            this.btnborrar.UseVisualStyleBackColor = true;
+            this.btnborrar.Click += new System.EventHandler(this.btnborrar_Click);
+            // 
             // Nomina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(971, 357);
+            this.Controls.Add(this.btnborrar);
             this.Controls.Add(this.txtnomina);
             this.Controls.Add(this.btnimprimir);
             this.Controls.Add(this.btnbuscar);
@@ -95,5 +107,6 @@
         private System.Windows.Forms.Button btnbuscar;
         private System.Windows.Forms.Button btnimprimir;
         private System.Windows.Forms.TextBox txtnomina;
+        private System.Windows.Forms.Button btnborrar;
     }
 }
