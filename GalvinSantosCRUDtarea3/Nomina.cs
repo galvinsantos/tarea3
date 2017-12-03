@@ -22,22 +22,18 @@ namespace GalvinSantosCRUDtarea3
         {
             try
             {
-                operacion oper = new operacion();
-                //DataSet ds = oper.ConsultaConResultado("SELECT * FROM detalle_nomina");
-                DataSet ds = oper.ConsultaConResultado(" select empleado.id, empleado.nombre, empleado.apellido, empleado.cedula, detalle_nomina.sueldo, " +
-                    "detalle_nomina.isr, detalle_nomina.ss, detalle_nomina.ahorro, detalle_nomina.total_descuento, detalle_nomina.total_descuento, " +
-                    "detalle_nomina.sueldo_neto   from empleado,detalle_nomina where empleado.id = detalle_nomina.id; ");
+                operacion oper = new operacion();                
+                DataSet ds = oper.ConsultaConResultado(" select empleado.id, empleado.nombre, empleado.apellido, empleado.cedula, sueldo, (sueldo * ss) as 'descuento ss', (sueldo * isr) as 'descuento isr', (sueldo * .19) as 'descuento total', sueldo - (sueldo * .19) as 'sueldo neto' from empleado,detalle_nomina where empleado.id = detalle_nomina.id; ");
+                // DataSet ds = oper.ConsultaConResultado(" select empleado.id, empleado.nombre, empleado.apellido, empleado.cedula, sueldo, sueldo* ss as 'descuento ss', sueldo* isr as 'descuento isr', (sueldo * ss) as 'descuento ss', (sueldo * isr) as 'descuento isr', (sueldo * .19) as 'descuento total', sueldo - (sueldo * .19) as 'sueldo neto' from empleado,detalle_nomina where empleado.id = detalle_nomina.id;");             
                 dataGridView1.DataSource = ds.Tables[0];
+
             }
-            catch (Exception ex)
+            catch (Exception)
 
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("La información se cargó correctamente");
             }
-            finally
-            {
-                MessageBox.Show("La información se correctamente");
-            }
+
 
 
         }
