@@ -13,11 +13,11 @@ namespace GalvinSantosCRUDtarea3
 {
     public partial class reportviewer : Form
     {
-        public reportviewer(string nombre_reporte)
+        public reportviewer(string nombre)
         {
             InitializeComponent();          
             ReportDocument crystal = new ReportDocument();
-            crystal.Load(nombre_reporte);
+            crystal.Load(nombre);
             crystalReportViewer1.ReportSource = crystal;
             crystalReportViewer1.Refresh();
         }
