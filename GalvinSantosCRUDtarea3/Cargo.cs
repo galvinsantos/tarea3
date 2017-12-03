@@ -45,7 +45,9 @@ namespace GalvinSantosCRUDtarea3
 
         private void button2_Click(object sender, EventArgs e)
         {
+            
 
+         
 
         }
 
@@ -57,14 +59,15 @@ namespace GalvinSantosCRUDtarea3
         private void Cargo_Load(object sender, EventArgs e)
         {
             //tabla de cargo
+            
             try
             {
                 
                 operacion oper = new operacion();
                 DataSet ds = oper.ConsultaConResultado(" select empleado.id, empleado.nombre, empleado.apellido, empleado.estatus, cargo.departamento from empleado,cargo where empleado.id = cargo.id; ");
                 dataGridView1.DataSource = ds.Tables[0];
-                
-              
+                dataGridView1.Refresh();
+
             }
             catch
             {
