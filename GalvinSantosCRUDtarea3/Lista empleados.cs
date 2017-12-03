@@ -27,6 +27,7 @@ namespace GalvinSantosCRUDtarea3
             }
             catch
             {
+                
 
             }
 
@@ -45,7 +46,7 @@ namespace GalvinSantosCRUDtarea3
         }
 
         private void button1_Click(object sender, EventArgs e)
-        {
+        {         
             Form2 form = new Form2();
             form.Show();
         }
@@ -93,11 +94,22 @@ namespace GalvinSantosCRUDtarea3
         private void btnimprimir_Click(object sender, EventArgs e)
         {
             // Exportando la data a formato XML
-            operacion oper = new operacion();
-            DataSet ds = oper.ConsultaConResultado(" select empleado.id, empleado.nombre, empleado.apellido, empleado.telefono, empleado.cedula, cargo.departamento from empleado,cargo where empleado.id = cargo.id;");
-            ds.WriteXml("c:\\Sistemas\\tarea3.xml");
-            reportviewer f = new reportviewer("reportempleado.rpt");
-            f.Show();
+            try
+            {
+                operacion oper = new operacion();
+                DataSet ds = oper.ConsultaConResultado(" select empleado.id, empleado.nombre, empleado.apellido, empleado.telefono, empleado.cedula, cargo.departamento from empleado,cargo where empleado.id = cargo.id;");
+                ds.WriteXml("c:\\Sistemas\\tarea3.xml");
+                reportviewer f = new reportviewer("reportempleado.rpt");
+                f.Show();
+            }
+          catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                MessageBox.Show("Se cargó correctamente ");
+            }
         }
     }
 }

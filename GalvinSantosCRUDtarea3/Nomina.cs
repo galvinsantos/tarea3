@@ -94,6 +94,7 @@ namespace GalvinSantosCRUDtarea3
 
         private void btnborrar_Click(object sender, EventArgs e)
         {
+            //eliminando contenido
             try
             {
                 foreach (DataGridViewRow item in this.dataGridView1.SelectedRows)
