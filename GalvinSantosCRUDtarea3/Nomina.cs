@@ -37,7 +37,26 @@ namespace GalvinSantosCRUDtarea3
 
         private void btnbuscar_Click(object sender, EventArgs e)
         {
+            buscar(txtnomina.Text);
+        }
 
+        private void buscar(string id)
+        {
+            //busqueda de cargo
+            try
+            {
+                operacion oper = new operacion();
+                DataSet ds = oper.ConsultaConResultado("SELECT * FROM detalle_nomina WHERE id='" + txtnomina.Text + "' ");
+                foreach (DataRow fila in ds.Tables[0].Rows)
+                {
+                 
+
+                }
+            }
+            catch
+            {
+
+            }
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -58,14 +77,23 @@ namespace GalvinSantosCRUDtarea3
         private void btnimprimir_Click(object sender, EventArgs e)
         {
             // Exportando la data a formato XML
-            operacion oper = new operacion();
-            DataSet ds = oper.ConsultaConResultado(" select empleado.id, empleado.nombre, empleado.apellido, empleado.cedula, sueldo, (sueldo * ss) as 'descuento ss', (sueldo * isr) as 'descuento isr', (sueldo * .19) as 'descuento total', sueldo - (sueldo * .19) as 'sueldo neto' from empleado,detalle_nomina where empleado.id = detalle_nomina.id;");
-            ds.WriteXml("c:\\Sistemas\\tarea4.xml");
-            reportviewer2 b = new reportviewer2 ("reportnomina.rpt");
-            b.Show();
-
-
+            try
+            {
+                operacion oper = new operacion();
+                DataSet ds = oper.ConsultaConResultado(" select empleado.id, empleado.nombre, empleado.apellido, empleado.cedula, sueldo, (sueldo * ss) as 'descuento ss', (sueldo * isr) as 'descuento isr', (sueldo * .19) as 'descuento total', sueldo - (sueldo * .19) as 'sueldo neto' from empleado,detalle_nomina where empleado.id = detalle_nomina.id;");
+                ds.WriteXml("c:\\Sistemas\\tarea4.xml");
+                reportviewer f = new reportviewer("reportnomina.rpt");
+                f.Show();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("No se como resolver este error :(");
+            }
+                
+            
         }
+
+    
 
         private void btnborrar_Click(object sender, EventArgs e)
         {

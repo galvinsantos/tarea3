@@ -45,9 +45,25 @@ namespace GalvinSantosCRUDtarea3
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
 
-         
+            try
+            {
+                foreach (DataGridViewRow item in this.dataGridView1.SelectedRows)
+                {
+                    dataGridView1.Rows.RemoveAt(item.Index);
+                }
+            }
+            catch (Exception ex)
+
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                MessageBox.Show("El contenido a sido eliminado");
+            }
+
+
 
         }
 

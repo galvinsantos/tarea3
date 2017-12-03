@@ -117,20 +117,18 @@
       <SubType>Component</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
+    <Compile Include="reportnom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportnom.Designer.cs">
+      <DependentUpon>reportnom.cs</DependentUpon>
+    </Compile>
     <Compile Include="reportviewer.cs">
       <SubType>Form</SubType>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="reportviewer.Designer.cs">
       <DependentUpon>reportviewer.cs</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Compile>
-    <Compile Include="reportviewer2.cs">
-      <SubType>Form</SubType>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Compile>
-    <Compile Include="reportviewer2.Designer.cs">
-      <DependentUpon>reportviewer2.cs</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <EmbeddedResource Include="Cargo.resx">
@@ -167,12 +165,11 @@
       <LastGenOutput>reportempleado.cs</LastGenOutput>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="reportnom.resx">
+      <DependentUpon>reportnom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="reportviewer.resx">
       <DependentUpon>reportviewer.cs</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="reportviewer2.resx">
-      <DependentUpon>reportviewer2.cs</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <None Include="packages.config" />

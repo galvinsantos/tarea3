@@ -11,17 +11,15 @@ using CrystalDecisions.CrystalReports.Engine;
 
 namespace GalvinSantosCRUDtarea3
 {
-    public partial class reportviewer2 : Form
+    public partial class reportnom : Form
     {
-        public reportviewer2(string nombre_reporte)
+        public reportnom(string nominaempleado)
         {
-            
-                InitializeComponent();
-                ReportDocument nomina = new ReportDocument();
-                nomina.Load(nombre_reporte);
-                crystalReportViewer2.ReportSource = nomina;
-                crystalReportViewer2.Refresh();
-            
+            InitializeComponent();
+            ReportDocument cryRpt = new ReportDocument();
+            cryRpt.Load(nominaempleado);
+            crystalReportViewer1.ReportSource = cryRpt;
+            crystalReportViewer1.Refresh();
         }
 
         private void crystalReportViewer1_Load(object sender, EventArgs e)

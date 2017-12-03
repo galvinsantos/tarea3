@@ -15,10 +15,10 @@ namespace GalvinSantosCRUDtarea3
     {
         public reportviewer(string nombre_reporte)
         {
-            InitializeComponent();          
-            ReportDocument crystal = new ReportDocument();
-            crystal.Load(nombre_reporte);
-            crystalReportViewer1.ReportSource = crystal;
+            InitializeComponent();
+            ReportDocument cryRpt = new ReportDocument();
+            cryRpt.Load(nombre_reporte);
+            crystalReportViewer1.ReportSource = cryRpt;
             crystalReportViewer1.Refresh();
         }
 
