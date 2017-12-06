@@ -76,6 +76,19 @@
     <Compile Include="Cargo.Designer.cs">
       <DependentUpon>Cargo.cs</DependentUpon>
     </Compile>
+    <Compile Include="empleadofoto.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>empleadofoto.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="fotoempleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fotoempleado.Designer.cs">
+      <DependentUpon>fotoempleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="reportenomina.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -133,6 +146,14 @@
     </Compile>
     <EmbeddedResource Include="Cargo.resx">
       <DependentUpon>Cargo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="empleadofoto.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>empleadofoto.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fotoempleado.resx">
+      <DependentUpon>fotoempleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="reportenomina.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

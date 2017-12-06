@@ -46,6 +46,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.txtdepartamento = new System.Windows.Forms.TextBox();
+            this.btnimprimir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -206,11 +207,22 @@
             this.txtdepartamento.Size = new System.Drawing.Size(132, 20);
             this.txtdepartamento.TabIndex = 19;
             // 
+            // btnimprimir
+            // 
+            this.btnimprimir.Location = new System.Drawing.Point(262, 282);
+            this.btnimprimir.Name = "btnimprimir";
+            this.btnimprimir.Size = new System.Drawing.Size(75, 23);
+            this.btnimprimir.TabIndex = 20;
+            this.btnimprimir.Text = "Imprimir";
+            this.btnimprimir.UseVisualStyleBackColor = true;
+            this.btnimprimir.Click += new System.EventHandler(this.btnimprimir_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(477, 331);
+            this.Controls.Add(this.btnimprimir);
             this.Controls.Add(this.txtdepartamento);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -257,5 +269,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox txtdepartamento;
+        private System.Windows.Forms.Button btnimprimir;
     }
 }
