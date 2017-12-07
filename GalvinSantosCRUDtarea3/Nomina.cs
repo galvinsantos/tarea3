@@ -79,6 +79,7 @@ namespace GalvinSantosCRUDtarea3
                 reportnom f = new reportnom("reportenomina.rpt"); //("C:\\Users\\santo\\Documents\\Visual Studio 2017\\Projects\\GalvinSantosCRUDtarea3\\GalvinSantosCRUDtarea3\\reportenomina.rpt");
                 f.Show();
             }
+        
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
