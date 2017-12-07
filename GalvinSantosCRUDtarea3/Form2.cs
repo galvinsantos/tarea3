@@ -170,7 +170,7 @@ namespace GalvinSantosCRUDtarea3
                     if (fila["departamento"] != null) txtdepartamento.Text = fila["departamento"].ToString();
                 }
                 ds.WriteXml("c:\\Sistemas\\tarea5.xml");
-                fotoempleado f = new fotoempleado("C:\\Users\\santo\\Documents\\Visual Studio 2017\\Projects\\GalvinSantosCRUDtarea3\\GalvinSantosCRUDtarea3\\empleadofoto.rpt");
+                fotoempleado f = new fotoempleado("empleadofoto.rpt"); 
                 f.Show();
 
             }
@@ -184,22 +184,7 @@ namespace GalvinSantosCRUDtarea3
                 MessageBox.Show("Se cargó correctamente ");
             }
 
-            /* try
-             {
-                 operacion oper = new operacion();
-                 DataSet ds = oper.ConsultaConResultado(" select empleado.id, empleado.nombre, empleado.apellido, empleado.cedula, empleado.telefono, cargo.departamento from empleado,cargo where empleado.id = cargo.id;");
-                 ds.WriteXml("c:\\Sistemas\\tarea5.xml");
-                 reportviewer f = new reportviewer("reportempleado.rpt");
-                 f.Show();
-             }
-             catch (Exception ex)
-             {
-                 MessageBox.Show(ex.Message);
-             }
-             finally
-             {
-                 MessageBox.Show("Se cargó correctamente ");
-             }*/
+           
         }
     }
 }
