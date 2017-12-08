@@ -23,7 +23,7 @@ namespace GalvinSantosCRUDtarea3
             try
             {
                 operacion oper = new operacion();                
-                DataSet ds = oper.ConsultaConResultado(" select empleado.id, empleado.nombre, empleado.apellido, empleado.cedula, sueldo, (sueldo * ss) as 'descuento ss', (sueldo * isr) as 'descuento isr', (sueldo * .19) as 'descuento total', sueldo - (sueldo * .19) as 'sueldo neto' from empleado,detalle_nomina where empleado.id = detalle_nomina.id; ");                           
+                DataSet ds = oper.ConsultaConResultado(" select empleado.id, empleado.nombre, empleado.apellido, empleado.cedula, sueldo, (sueldo * ss) as 'descuento ss', (sueldo * isr) as 'descuento isr', (sueldo * .19) as 'descuento total', sueldo - (sueldo * .19) as 'sueldo neto' from empleado,detalle_nomina where empleado.id = detalle_nomina.id; ");
                 dataGridView1.DataSource = ds.Tables[0];
 
             }
@@ -42,15 +42,21 @@ namespace GalvinSantosCRUDtarea3
 
         private void buscar(string id)
         {
-            //busqueda de cargo
-            try
+            //busqueda de nomina
+            /*try
             {
-               
+                operacion oper = new operacion();
+                DataSet ds = oper.ConsultaConResultado(" select empleado.id, empleado.nombre, empleado.apellido, empleado.cedula from empleado where id= '" + txtnomina.Text + "'  ");
+                //("SELECT * FROM empleado WHERE id='" + txtnomina.Text + "' "); 
+                dataGridView1.DataSource = ds.Tables[0];
+
+                DataSet dt = oper.ConsultaConResultado(" select detalle_nomina.sueldo, (sueldo * ss) as 'descuento ss', (sueldo * isr) as 'descuento isr', (sueldo * .19) as 'descuento total', sueldo - (sueldo * .19) as 'sueldo neto' from detalle_nomina where id = '" + txtnomina.Text + "'  ");
+                dataGridView1.DataSource = dt.Tables[0];
             }
             catch
             {
 
-            }
+            }*/
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)

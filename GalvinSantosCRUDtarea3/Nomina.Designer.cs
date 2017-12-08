@@ -47,7 +47,7 @@
             // 
             // btnbuscar
             // 
-            this.btnbuscar.Location = new System.Drawing.Point(63, 85);
+            this.btnbuscar.Location = new System.Drawing.Point(117, 87);
             this.btnbuscar.Name = "btnbuscar";
             this.btnbuscar.Size = new System.Drawing.Size(75, 23);
             this.btnbuscar.TabIndex = 1;
@@ -69,7 +69,7 @@
             // 
             this.txtnomina.Location = new System.Drawing.Point(12, 87);
             this.txtnomina.Name = "txtnomina";
-            this.txtnomina.Size = new System.Drawing.Size(45, 20);
+            this.txtnomina.Size = new System.Drawing.Size(99, 20);
             this.txtnomina.TabIndex = 3;
             // 
             // btnborrar

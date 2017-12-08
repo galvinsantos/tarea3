@@ -71,17 +71,15 @@ namespace GalvinSantosCRUDtarea3
 
         private void button2_Click(object sender, EventArgs e)
         {
-
             buscar(txtid.Text);
-
         }
 
         private void buscar(string id)
         {
+            
             try
             {
                 //connectar a la base de datos para poder encontrar la informacion via el "id"
-
                 operacion oper = new operacion();
                 DataSet ds = oper.ConsultaConResultado("SELECT * FROM empleado WHERE id='" + txtid.Text + "' ");
                 foreach (DataRow fila in ds.Tables[0].Rows)
