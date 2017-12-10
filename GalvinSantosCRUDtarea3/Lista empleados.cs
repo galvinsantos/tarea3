@@ -98,7 +98,7 @@ namespace GalvinSantosCRUDtarea3
             {
                 operacion oper = new operacion();
                 DataSet ds = oper.ConsultaConResultado(" select empleado.id, empleado.nombre, empleado.apellido, empleado.telefono, empleado.cedula, cargo.departamento from empleado,cargo where empleado.id = cargo.id;");
-                ds.WriteXml("c:\\Sistemas\\tarea3.xml");
+                ds.WriteXml("c:\\Sistemas\\listaempleados.xml");
                 reportviewer f = new reportviewer("reportempleado.rpt");
                 f.Show();
             }

@@ -147,42 +147,81 @@ namespace GalvinSantosCRUDtarea3
         {
             try
             {
-                //connectar a la base de datos para poder encontrar la informacion via el "id"
-
                 operacion oper = new operacion();
-                DataSet ds = oper.ConsultaConResultado("SELECT * FROM empleado WHERE id='" + txtid.Text + "' ");
-                foreach (DataRow fila in ds.Tables[0].Rows)
-
+                string seleccion = txtid.Text.ToString();             
                 {
+                    DataSet ds = oper.ConsultaConResultado(" SELECT * FROM empleado WHERE id='" + txtid.Text + "' ");
+                    foreach (DataRow fila in ds.Tables[0].Rows)
+                    {
+                        if (fila["id"] != null) txtid.Text = fila["id"].ToString();
+                        if (fila["nombre"] != null) txtnombre.Text = fila["nombre"].ToString();
+                        if (fila["apellido"] != null) txtapellido.Text = fila["apellido"].ToString();
+                        if (fila["telefono"] != null) txttelefono.Text = fila["telefono"].ToString();
+                        if (fila["cedula"] != null) txtcedula.Text = fila["cedula"].ToString();
+                    }
+                    operacion dep = new operacion();
+                    DataSet dt = dep.ConsultaConResultado("SELECT departamento FROM cargo WHERE id='" + txtid.Text + "' ");
+                    foreach (DataRow fila in dt.Tables[0].Rows)
+                    {
+                        if (fila["departamento"] != null) txtdepartamento.Text = fila["departamento"].ToString();
+                    }
 
-                    if (fila["id"] != null) txtid.Text = fila["id"].ToString();
-                    if (fila["nombre"] != null) txtnombre.Text = fila["nombre"].ToString();
-                    if (fila["apellido"] != null) txtapellido.Text = fila["apellido"].ToString();
-                    if (fila["telefono"] != null) txttelefono.Text = fila["telefono"].ToString();
-                    if (fila["cedula"] != null) txtcedula.Text = fila["cedula"].ToString();
+                    ds.WriteXml("c:\\Sistemas\\empleado.xml");
+                    fotoempleado f = new fotoempleado("empleadofoto.rpt");
+                    f.Show();
                 }
-                operacion dep = new operacion();
-                DataSet dt = dep.ConsultaConResultado("SELECT departamento FROM cargo WHERE id='" + txtid.Text + "' ");
-                foreach (DataRow fila in dt.Tables[0].Rows)
-                {
-                    if (fila["departamento"] != null) txtdepartamento.Text = fila["departamento"].ToString();
-                }
-                ds.WriteXml("c:\\Sistemas\\tarea5.xml");
-                fotoempleado f = new fotoempleado("empleadofoto.rpt"); 
-                f.Show();
-
+              
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-
-                MessageBox.Show("Se cargó correctamente ");
+                MessageBox.Show("Debe buscar un empleado!");
             }
 
-           
+
+            /* try
+             {
+                 string seleccion = cbTipoBusqueda.SelectedItem.ToString();
+                 operacion oper = new operacion();
+                 SQLiteConnection cnx = new SQLiteConnection("Data Source=C:\\BDSistema\\BD_Cia.del_Caribe.db;Version=3;");
+                 cnx.Open();
+                 if (seleccion == "Nmero Empleado")
+
+                     //connectar a la base de datos para poder encontrar la informacion via el "id"
+
+                 operacion oper = new operacion();
+                 DataSet ds = oper.ConsultaConResultado("SELECT * FROM empleado WHERE id='" + txtid.Text + "' ");
+                 foreach (DataRow fila in ds.Tables[0].Rows)
+
+                 {
+
+                     if (fila["id"] != null) txtid.Text = fila["id"].ToString();
+                     if (fila["nombre"] != null) txtnombre.Text = fila["nombre"].ToString();
+                     if (fila["apellido"] != null) txtapellido.Text = fila["apellido"].ToString();
+                     if (fila["telefono"] != null) txttelefono.Text = fila["telefono"].ToString();
+                     if (fila["cedula"] != null) txtcedula.Text = fila["cedula"].ToString();
+                 }
+                 operacion dep = new operacion();
+                 DataSet dt = dep.ConsultaConResultado("SELECT departamento FROM cargo WHERE id='" + txtid.Text + "' ");
+                 foreach (DataRow fila in dt.Tables[0].Rows)
+                 {
+                     if (fila["departamento"] != null) txtdepartamento.Text = fila["departamento"].ToString();
+                 }
+                 ds.WriteXml("c:\\Sistemas\\tarea5.xml");
+                 fotoempleado f = new fotoempleado("empleadofoto.rpt"); 
+                 f.Show();
+
+             }
+             catch (Exception ex)
+             {
+                 MessageBox.Show(ex.Message);
+             }
+             finally
+             {
+
+                 MessageBox.Show("Se cargó correctamente ");
+             }*/
+
+
         }
     }
 }

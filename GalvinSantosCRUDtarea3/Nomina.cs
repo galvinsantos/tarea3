@@ -82,7 +82,7 @@ namespace GalvinSantosCRUDtarea3
             {
                 operacion oper = new operacion();
                 DataSet dt = oper.ConsultaConResultado(" select empleado.id, empleado.nombre, empleado.apellido, empleado.cedula, sueldo, (sueldo * ss) as 'descuento ss', (sueldo * isr) as 'descuento isr', (sueldo * .19) as 'descuento total', sueldo - (sueldo * .19) as 'sueldo neto' from empleado,detalle_nomina where empleado.id = detalle_nomina.id;");
-                dt.WriteXml("c:\\Sistemas\\tarea4.xml");
+                dt.WriteXml("c:\\Sistemas\\todonomina.xml");
                 reportnom f = new reportnom("reportenomina.rpt"); //("C:\\Users\\santo\\Documents\\Visual Studio 2017\\Projects\\GalvinSantosCRUDtarea3\\GalvinSantosCRUDtarea3\\reportenomina.rpt");
                 f.Show();
             }
